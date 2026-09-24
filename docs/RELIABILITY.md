@@ -36,8 +36,10 @@ The failure modes *outside* the clean-crash model are handled explicitly rather 
   a documented legacy limitation the v1 format closes.
 - **Downgrade warning.** A v1 file opened by LibreDB 0.1.3 or older is silently truncated to zero (the
   old recovery cannot recognize the header). Never downgrade past this version with live data; back up
-  first. Also: a headerless legacy file whose only record is torn now refuses to open (it is
-  indistinguishable from a foreign file); 0.1.3 opened it as empty.
+  first. The version story, the other legacy-behavior changes, and how to copy a headerless file into
+  a v1 database are in [`MIGRATION.md`](./MIGRATION.md). Also: a headerless legacy file whose only
+  record is torn now refuses to open (it is indistinguishable from a foreign file); 0.1.3 opened it
+  as empty.
 - **A short read is an IO fault, not missing data.** If the filesystem returns fewer bytes than the
   file holds, recovery throws (`code: "INCOMPLETE_READ"`) instead of mistaking the cut for a torn tail
   and truncating committed transactions.

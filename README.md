@@ -313,6 +313,7 @@ Honesty about scale (comprehension is the budget in v1, not throughput):
 | Architecture — the guided tour under the hood | [`ARCHITECTURE.md`](./ARCHITECTURE.md) |
 | Design — the locked engineering decisions | [`docs/DESIGN.md`](./docs/DESIGN.md) |
 | Reliability — durability and crash recovery | [`docs/RELIABILITY.md`](./docs/RELIABILITY.md) |
+| Migration — on-disk versions and the downgrade warning | [`docs/MIGRATION.md`](./docs/MIGRATION.md) |
 | Manifesto — what LibreDB is and refuses to be | [`MANIFESTO.md`](./MANIFESTO.md) |
 | LibreDB Studio integration | [`docs/STUDIO.md`](./docs/STUDIO.md) |
 

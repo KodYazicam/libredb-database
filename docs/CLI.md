@@ -224,7 +224,9 @@ file copy — with one rule.
   ```
 
 - **Restore:** copy the file back and open it — recovery replays it like any
-  reopen. Nothing else to do.
+  reopen. Nothing else to do. Do not open a v1 file with LibreDB 0.1.3 or
+  older: that recovery truncates it to zero. See
+  [`MIGRATION.md`](./MIGRATION.md).
 - **Export as JSON:** `libredb export <path> <file.json>` dumps the key-value
   layer as an import-compatible object — see
   [`export`](#export-path-filejson--json-dump) for exactly what it covers.
